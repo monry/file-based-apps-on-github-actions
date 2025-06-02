@@ -6,6 +6,7 @@ on:
 jobs:
   run:
     name: Run File-based Apps
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v4
