@@ -1,0 +1,17 @@
+name: Run .NET 10 File-based Apps
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    name: Run File-based Apps
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup .NET 10 (Preview)
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.100-preview.4.25258.110'
+    - name: dotnet run
+      run: dotnet run app.cs
