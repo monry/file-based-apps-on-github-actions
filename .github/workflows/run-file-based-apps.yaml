@@ -52,4 +52,4 @@ jobs:
             int Baz,
             bool Quz
         );
-      shell: dotnet-run {0}
+      shell: dotnet-run
