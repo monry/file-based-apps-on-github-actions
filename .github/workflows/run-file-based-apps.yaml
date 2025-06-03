@@ -17,7 +17,7 @@ jobs:
     - name: Workaround
       run: |
         echo -e "{\n  \"sdk\": {\n    \"version\": \"10.0.100-preview.4.25258.110\"\n  }\n}" > global.json
-        echo -e '#!/usr/bin/env bash\ndotnet run ${1}' > dotnet-run
+        echo -e '#!/usr/bin/env bash\necho ${1}\ndotnet --version\ndotnet run ${1}' > dotnet-run
         chmod +x dotnet-run
         pwd >> ${GITHUB_PATH}
     - name: dotnet run
